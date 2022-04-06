@@ -10,7 +10,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-let xsDefaultTemplate = new Object({
+let xsDefaultTemplate = {
      "exposed": false,
      "authentication": {
           "method": "Form"
@@ -39,13 +39,16 @@ let xsDefaultTemplate = new Object({
      "headers": {
           "enabled": false
      }
-});
+};
 
 exports.getTemplate = function () {
      return {
           "name": "xsaccess",
           "label": "Application-access file (.xsaccess)",
           "extension": "xsaccess",
+          "oncePerFolder": true,
+          "editOnCreate": false,
+          "nameless": true,
           "data": JSON.stringify(xsDefaultTemplate)
      };
 };
