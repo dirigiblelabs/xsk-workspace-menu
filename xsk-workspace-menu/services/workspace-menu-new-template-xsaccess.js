@@ -47,8 +47,9 @@ exports.getTemplate = function () {
           "label": "Application-access file (.xsaccess)",
           "extension": "xsaccess",
           "oncePerFolder": true,
-          "editOnCreate": false,
+          "staticName": true,
           "nameless": true,
+          "isModel": true,
           "data": JSON.stringify(xsDefaultTemplate)
      };
 };
